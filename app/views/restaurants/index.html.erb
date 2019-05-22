@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="navbar-lewagon">
+    <h1 style="color:#22eaca">Nos Restaurants</h1>
+    <%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-outline-secondary" %>
+  </div>
+
+
+  <% @restaurants.each do |restaurant| %>
+    <div class="card">
+        <h2><%=restaurant.name%></h2>
+        <p><%= restaurant.category%>,<%= restaurant.address%></p>
+    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-outline-secondary"%>
+    </div>
+  <% end %>
+
+</div>
+
+
